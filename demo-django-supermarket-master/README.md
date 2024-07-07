@@ -22,7 +22,11 @@ https://stackoverflow.com/a/64095095
 > pip3 install -U pip
 > pip3 install -U setuptools
 ```
-3. pip3 install mysqlclient
+安装所需的包
+```bash
+> pip3 install -r requirements.txt
+```
+
 4. 本机安装好 mysql 服务并启动 sudo /etc/init.d/mysql start
 5. 使用/创建用户 admin, 使用创建数据库 demo_django_supermarket (root权限下)
     - 创建数据库 
@@ -66,7 +70,7 @@ https://docs.djangoproject.com/en/4.0/howto/initial-data/
 
 1. 启动服务
 ```bash
-> python3 manage.py runserver localhost:8001
+> python3 manage.py runserver 500001
 ```
 > 若启动以 0.0.0.0:8001 还能在局域网内的其他设备访问
 
