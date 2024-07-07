@@ -5,6 +5,7 @@
 ## 环境配置 (Ubuntu 18.04)
 - Ubuntu 18.04
 - python3.7 [升级3.7](https://jcutrer.com/linux/upgrade-python37-ubuntu1810)
+- mysql 8.0.38
 
 ### 数据库 (mysqlclient)
 1. 系统需要装好 default-libmysqlclient-dev
