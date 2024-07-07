@@ -1,0 +1,107 @@
+{% extends "home/all.html" %}
+
+{% block title %}
+-关于
+{% endblock %}
+
+{% block loc %}
+        关于
+{% endblock loc %}
+{% block main %}
+<style type="text/css">
+	h5{
+		color:#fff;
+	}
+</style>
+	<!-- about-slid -->
+	<div class="about-slid agileits-w3layouts">
+		<div class="container">
+			<div class="about-slid-info">
+				<h2>优选百货，品质生活</h2>
+				<p>每天都会进行一次上架商品的检查，每周都会进行一次库存货物的更新，保证您的购物品质和体验</p>
+			</div>
+		</div>
+	</div>
+	<!-- //about-slid -->
+
+<!-- about -->
+	<div class="about">
+		<div class="container">
+			<h3 class="w3_agile_header">ABOUT</h3>
+			<div class="about-agileinfo w3layouts">
+				<div class="col-md-8 about-wthree-grids grid-top">
+					<h4>对于网站前端的说明：</h4>
+                    <p>本网站旨在方便群众购物，减少出行排放、提升购物效率以及
+						方便了解产品帮助商家宣传，如有侵权请联系“疯狂星期四”开发组，将在三日内做出回复，谢谢！
+                    </p>
+                    <div class="about-w3agilerow">
+						<div class="about-slid agileits-w3layouts">
+                    </div>
+						<div class="clearfix"> </div>
+					</div>
+                    <br>
+					<h4>Statement：</h4>
+                    <p>This website is designed to make shopping easier for the masses, reduce travel emissions, improve shopping efficiency and
+						It is convenient to understand the product to help the merchant promote, if there is any infringement, please contact the
+						"Crazy Thursday" development team, and a reply will be made within three days，Thinks！
+                    </p>
+				</div>
+				<div class="col-md-4 about-wthree-grids">
+					<div class="offic-time">
+						<div class="time-top">
+							<h5>版权所有：疯狂星期四开发组</h5>
+						</div>
+						<div class="time-bottom">
+
+						</div>
+					</div>
+                    <!--最近评价-->
+					<div class="testi">
+						<a href="/feedback"> <h3 class="w3_agile_header">反馈 &amp; 评价</h3></a>
+						<!--//End-slider-script -->
+						<script src="../../../static/home/js/responsiveslides.min.js"></script>
+						 <script>
+							// You can also use "$(window).load(function() {"
+							$(function () {
+							  // Slideshow 5
+							  $("#slider5").responsiveSlides({
+								auto: true,
+								pager: false,
+								nav: true,
+								speed: 500,
+								namespace: "callbacks",
+								before: function () {
+								  $('.events').append("<li>before event fired.</li>");
+								},
+								after: function () {
+								  $('.events').append("<li>after event fired.</li>");
+								}
+							  });
+
+							});
+						  </script>
+						<div  id="top" class="callbacks_container">
+							<ul class="rslides" id="slider5">
+                                {% for m in message %}
+                                <li>
+									<div class="testi-slider">
+										<h4>" {{ m.content }} "</h4>
+{#										<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eu magna dolor, quisque semper.</p>#}
+										<div class="testi-subscript">
+											<p><a>{{ m.name }}</a></p>
+											<span class="w3-agilesub"> </span>
+										</div>
+									</div>
+								</li>
+                                {% endfor %}
+							</ul>
+						</div>
+					</div>
+                    <!--//最近评价-->
+				</div>
+				<div class="clearfix"> </div>
+			</div>
+		</div>
+	</div>
+	<!-- //about -->
+{% endblock %}
